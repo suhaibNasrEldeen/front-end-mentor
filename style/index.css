@@ -1,0 +1,441 @@
+:root {
+  --mainColor: #2e2e2e;
+  --secundColor: rgb(63, 178, 172);
+  --colorP: #d0d0d0;
+  --mainRadius: 34px;
+  --mainMargin: 10px;
+}
+
+.biger {
+  position: absolute;
+  left: 0%;
+  top: 200px;
+  width: 100%;
+}
+@media (max-width: 676px) {
+  .biger {
+    bottom: 1px;
+  }
+}
+header {
+  height: 72px;
+  background-image: url(../images/image-hero-desktop.jpg);
+  background-size: cover;
+  height: 50vh;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .links ul.menu {
+  display: flex;
+  z-index: 1;
+}
+header .container .links ul.menu li {
+  padding: 10px;
+}
+header .container .links ul.menu li a {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  height: 72px;
+  text-transform: capitalize;
+}
+header .container .logo a {
+  font-size: 26px;
+  color: white;
+  height: 72px;
+}
+.icon-power {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  header .container {
+    align-items: baseline;
+  }
+  .icon-power {
+    display: block;
+    position: absolute;
+    right: 18px;
+    top: 11px;
+    font-size: 26px;
+    cursor: pointer;
+  }
+  header .container .links ul.menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 100%;
+    top: 40px;
+    height: 30vh;
+    width: 100%;
+    background-color: rgb(0 0 0 / 65%);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  header .container .links ul.menu li {
+    flex: 1;
+  }
+  header .container .links .icon-power + ul.power {
+    right: 0;
+  }
+}
+/* ////first card */
+.about .container {
+  display: flex;
+  justify-content: center;
+}
+.about .container > div {
+  position: relative;
+  text-align: center;
+  border-radius: 34px;
+  background-color: var(--mainColor);
+  width: 660px;
+}
+.about .container > div img {
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.about .container > div article {
+  padding: 23px;
+}
+.about .container > div article h1 {
+  font-size: 24px;
+  /* font-weight: bold; */
+  padding-bottom: 15px;
+}
+.about .container > div article p {
+  margin: 12px;
+}
+.about .container > div article .buttons {
+  display: flex;
+  width: 91%;
+  justify-content: space-around;
+  user-select: none;
+}
+@media (max-width: 500px) {
+  .about .container > div article .buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+.about .container > div article button {
+  border: none;
+  border-radius: 29px;
+  /* margin-right: 100px; */
+}
+
+.about .container > div article button.first-child {
+  background-color: var(--secundColor);
+}
+.discover {
+  margin-top: var(--mainMargin);
+}
+.discover .container {
+  display: flex;
+  justify-content: center;
+}
+.discover .container .intro {
+  width: 660px;
+  background-color: var(--mainColor);
+  position: relative;
+  height: 120px;
+  border-radius: var(--mainRadius);
+}
+
+.discover .container .intro span {
+  display: block;
+  display: block;
+  background: rgb(105, 104, 104);
+  /* opacity: 0.2; */
+  width: 90%;
+  height: 6%;
+  left: 34px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 14px;
+}
+.discover .container .intro span::after {
+  content: "";
+  background: var(--secundColor);
+  width: 68%;
+  height: 10px;
+  position: absolute;
+  border-radius: 10px;
+}
+.discover .container .cards {
+  display: grid;
+  border-radius: var(--mainRadius);
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.discover .container .cards .card {
+  padding: 10px;
+  text-align: center;
+}
+.discover .container .cards .card:not(:last-child) {
+  border-right: 1px solid black;
+}
+.discover .container .cards .card h1 {
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 6px;
+}
+.discover .container .cards .card h2 {
+  color: var(--colorP);
+  font-size: 16px;
+}
+@media (max-width: 700px) {
+  .discover .container .intro {
+    height: 230px;
+  }
+  .discover .container .intro span {
+    width: 70%;
+  }
+  .discover .container .cards {
+    display: block;
+  }
+  .discover .container .cards .card:not(:last-child) {
+    border-right: none;
+  }
+  .backed {
+    border: 2px solid;
+    border-color: black transparent;
+  }
+}
+.end .container {
+  display: flex;
+  justify-content: center;
+}
+.end .container > div {
+  margin: var(--mainMargin);
+  border-radius: 34px;
+  background: var(--mainColor);
+  padding: 52px;
+  width: 660px;
+}
+.end .container article {
+  line-height: 2;
+}
+@media (max-width: 660px) {
+  .end .container article {
+    line-height: 1.5;
+    font-size: 12px;
+  }
+}
+.end .container article h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.end .container article p {
+  color: var(--colorP);
+}
+.end .card {
+  border: 1px solid;
+  padding: 21px;
+  margin: var(--mainMargin);
+}
+.end .card ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.end .card > ul > li.start {
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 7px;
+  color: black;
+}
+.end .card p {
+  line-height: 1.4;
+  margin: 10px 0;
+  color: #736d6d;
+}
+.price {
+  font-size: 17px;
+  color: var(--secundColor);
+  font-weight: 300;
+}
+.Enum {
+  font-size: 38px;
+  font-weight: 300;
+  position: relative;
+  color: beige;
+}
+.Enum span {
+  font-size: 13px;
+  color: #777;
+  position: absolute;
+  bottom: 0%;
+}
+.end .card button {
+  font-weight: 100;
+  background-color: var(--secundColor);
+  border: navajowhite;
+  border-radius: 35px;
+}
+.hiden {
+  opacity: 0.4;
+}
+@media (max-width: 600px) {
+  .end .card ul {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .end .container > div {
+    padding: 15px;
+  }
+}
+.venom {
+  position: absolute;
+  top: 10%;
+  height: 100vh;
+  width: 100%;
+  /* background-color: rgb(0, 0, 0); */
+  opacity: 0;
+  z-index: -1;
+  transition: 0.3s;
+}
+.venom .over {
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  background: black;
+  opacity: 50%;
+}
+.venom .close {
+  position: absolute;
+  right: 34px;
+  background: none;
+  top: 10px;
+  border: none;
+  color: white;
+}
+.venom .container {
+  display: flex;
+  justify-content: center;
+}
+.venom .container > div.main-cards {
+  width: 660px;
+  background-color: var(--mainColor);
+  z-index: 1;
+  margin-top: 25px;
+  padding: 21px;
+  border-radius: 34px;
+}
+.venom .container > div.main-cards article {
+  padding-left: 10px;
+}
+.venom .container > div.main-cards article h1 {
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+.venom .container > div.main-cards article p {
+  letter-spacing: 1px;
+  color: #ddd;
+}
+.show {
+  opacity: 1;
+  z-index: 1;
+  /* display: flex; */
+}
+form .card {
+  display: flex;
+  border: 1px solid;
+  padding: 15px;
+  margin: var(--mainMargin);
+}
+form .card input[type="radio"] {
+  margin-right: 15px;
+}
+form .card input[type="radio"]::foucs .card {
+  border: 1px solid green;
+}
+form label h1 {
+  padding-bottom: 12px;
+  font-size: 20px;
+}
+form label p {
+  font-size: 17px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-style: italic;
+  line-height: 1.5;
+}
+form label.tow ul {
+  display: flex;
+  justify-content: space-between;
+}
+form label.tow ul li:nth-child(2) p {
+  color: var(--secundColor);
+}
+form label.tow ul li:nth-child(3) p {
+  position: relative;
+  font-size: 20px;
+  right: 10px;
+}
+
+form label.tow ul li:nth-child(3) p span {
+  position: absolute;
+  font-size: 10px;
+  bottom: 0;
+}
+form label.tow > div {
+  display: none;
+  justify-content: space-between;
+  margin-top: 50px;
+  border-top: 1px solid rgb(0, 0, 0);
+  padding: 10px 0;
+  transition: 3s;
+}
+form label.tow > div .text {
+  border: none;
+  background: none;
+  width: 50%;
+  color: black;
+}
+form label.tow > div .money {
+  border: navajowhite;
+  border-radius: 50px;
+  padding: 0 30px;
+}
+form label.tow > div .con {
+  border: navajowhite;
+  border-radius: 50px;
+  background: var(--secundColor);
+  padding: 0 29px;
+}
+form .card label.see > div {
+  display: flex;
+}
+@media (max-width: 560px) {
+  form label.tow ul {
+    flex-wrap: wrap;
+  }
+  form label.tow > div {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  h1 {
+    font-size: 16px;
+  }
+}
+body > button.icon-arrow-up {
+  position: fixed;
+  bottom: 0;
+  right: -100px;
+  border: none;
+  color: var(--secundColor);
+  background: var(--mainColor);
+  font-size: 24px;
+  z-index: 1;
+  transition: 0.3s;
+}
+body > button.top {
+  right: 10px;
+}
